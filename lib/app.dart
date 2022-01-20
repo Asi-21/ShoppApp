@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'supplemental/cut_corners_border.dart';
+
 
 import 'home.dart';
 import 'login.dart';
@@ -14,7 +16,7 @@ class ShrineApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shrine',
       // TODO: Change home: to a Backdrop with a HomePage frontLayer (104)
-      home: const HomePage(),
+      home:  HomePage(),
       // TODO: Make currentCategory field take _currentCategory (104)
       // TODO: Pass _currentCategory for frontLayer (104)
       // TODO: Change backLayer field value to CategoryMenuPage (104)
@@ -58,6 +60,16 @@ textSelectionTheme: const TextSelectionThemeData(
 ),
     // TODO: Add the icon themes (103)
     // TODO: Decorate the inputs (103)
+        inputDecorationTheme: const InputDecorationTheme(
+  focusedBorder: CutCornersBorder(
+    borderSide: BorderSide(
+      width: 2.0,
+      color: kShrineBrown900,
+    ),
+  ),
+  border: CutCornersBorder(), // Replace code
+),
+
   );
 }
 // TODO: Build a Shrine Text Theme (103)
