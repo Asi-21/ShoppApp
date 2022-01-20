@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 Image.asset('assets/diamond.png'),
                 const SizedBox(height: 16.0),
-                const Text('SHRINE'),
+                const Text('SHOPP'),
               ],
             ),
             const SizedBox(height: 120.0),
@@ -64,7 +64,11 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 // TODO: Add a beveled rectangular border to CANCEL (103)
                 TextButton(
-                  child: const Text('CANCEL'),
+                  child: const Text('CANCEL',
+                  style: TextStyle(
+                    color: Colors.black
+                  ),)
+                  ,
                   onPressed: () {
                     _usernameController.clear();
                     _passwordController.clear();
